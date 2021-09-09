@@ -1,0 +1,9 @@
+.side {
+    height: 100vh;
+    background-color: #fff;
+}
+
+.head {
+    background-color: #fff;
+    @include webkit(box-shadow, 0 3px 16px rgba(0, 0, 0, .1));
+}

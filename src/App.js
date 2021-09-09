@@ -1,22 +1,16 @@
-import './App.css';
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { renderRoutes } from 'react-router-config';
+import routes from './routes/index';
+
+import Login from './views/login/index'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        {renderRoutes(routes)}
+      </Switch>
+    </BrowserRouter>
   );
 }
 

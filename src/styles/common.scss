@@ -1,0 +1,12 @@
+// 公共样式
+// 已在 webpack 配置全局通用
+
+// 浏览器兼容性
+@mixin webkit($attr, $value) {
+    #{$attr}: $value;
+    -o-#{$attr}: $value;
+    -ms-#{$attr}: $value;
+    -ms-#{$attr}: $value;
+    -moz-#{$attr}: $value;
+    -webkit-#{$attr}: $value;
+}
