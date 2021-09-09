@@ -1,6 +1,14 @@
-# React 人事后台系统
+# React 后台系统
 
-## 开发技术
-- scss 
-- antd
-- 
+## 技术栈
+### 前端
+  * React Hooks
+  * React Route Dom
+  * Scss
+  * Axios
+  * Ant 模板
+
+#### 接口格式 RESTFul
+
+
+
