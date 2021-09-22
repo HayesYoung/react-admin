@@ -13,9 +13,16 @@ export default function LoginForm(props) {
     const { toggleForm } = props;
     let history = useHistory();
 
+    // 表单初始数据
+    const initialValues = {
+        remember: true,
+        username: "admin@gmail.com",
+        password: "123456"
+    }
+
     const success = () => {
         message.success('登陆成功', 1);
-      };
+    };
 
     const onFinish = (values) => {
         if (getToken != null) {
@@ -47,7 +54,8 @@ export default function LoginForm(props) {
             <Form
                 name="normal_login"
                 className="login-form"
-                initialValues={{ remember: true }}
+                initialValues={initialValues}
+                // initialValues={{ remember: true }, {"username": "admin@gmail.com"},{"password": "123456"} }
                 onFinish={onFinish}
             >
                 <Form.Item
@@ -59,19 +67,22 @@ export default function LoginForm(props) {
                         ]
                     }
                 >
-                    <Input prefix={<UserOutlined className="site-form-item-icon" />}
+                    <Input
+                        // defaultValue="admin@gmail.com"
+                        prefix={<UserOutlined className="site-form-item-icon" />}
                         placeholder="用户名"
-                        defaultValue="admin@gmail.com" />
+                    />
                 </Form.Item>
                 <Form.Item
                     name="password"
                     rules={[{ required: true, message: '请输入您的密码' }]}
                 >
                     <Input
+                        // defaultValue="123456"
                         prefix={<LockOutlined className="site-form-item-icon" />}
                         type="password"
                         placeholder="密码"
-                        defaultValue="123456"
+
                     />
                 </Form.Item>
                 <Form.Item>
