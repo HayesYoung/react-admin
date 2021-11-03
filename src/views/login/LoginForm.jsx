@@ -68,7 +68,7 @@ export default function LoginForm(props) {
                     }
                 >
                     <Input
-                        // defaultValue="admin@gmail.com"
+                     
                         prefix={<UserOutlined className="site-form-item-icon" />}
                         placeholder="用户名"
                     />
@@ -78,7 +78,7 @@ export default function LoginForm(props) {
                     rules={[{ required: true, message: '请输入您的密码' }]}
                 >
                     <Input
-                        // defaultValue="123456"
+                    
                         prefix={<LockOutlined className="site-form-item-icon" />}
                         type="password"
                         placeholder="密码"
